@@ -1,0 +1,8 @@
+@import "pages/index";
+@import "components/index";
+@import "config/index";
+
+body {
+  font-family: $body-font;
+  background: $dark-gray;
+}
