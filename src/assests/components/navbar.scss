@@ -1,0 +1,50 @@
+@import "../config/index";
+
+#nav-bar{
+  height: 75px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 10px;
+  border-bottom: 0.5px solid white;
+
+  .main-nav-item{
+    text-decoration: none;
+    color: white;
+    font-size: 24px ;
+  }
+
+  .link-group{
+    li {
+      display:inline;
+      margin: 0px 24px;
+    }
+
+    .nav-item{
+      padding: 12px;
+      text-decoration: none;
+      color: $hotpink;
+      font-size: 12px;
+
+
+    }
+
+    .nav-link{
+      &:hover{
+        text-decoration: underline;
+      }
+
+    }
+
+    .nav-btn{
+      border : 0.5px solid $hotpink;
+      border-radius: 25px;
+
+      &:hover{
+        background: $hotpink;
+        color: white;
+      }
+    }
+  }
+
+}
