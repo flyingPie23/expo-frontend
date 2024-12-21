@@ -1,14 +1,21 @@
 @import "../config/index";
 
-#login-page{
+#auth-page{
   display: flex;
   justify-content: center;
   text-align: center;
-  margin: 50px 450px;
-  padding: 30px;
-  border-radius: 25px;
-  border-bottom: 1px solid $hotpink;
-  border-right: 1px solid $hotpink;
+
+
+  .form-container{
+
+    margin: 50px auto ;
+    padding: 50px;
+    width: 450px;
+    border-radius: 25px;
+    border-bottom: 1px solid $hotpink;
+    border-right: 1px solid $hotpink;
+
+  }
 
   color: white;
 
@@ -17,7 +24,9 @@
     border-radius: 5px;
     border: 1px solid $hotpink;
 
-    width: 450px;
+    color: $hotpink;
+
+    width: 100%;
     background-color: transparent;
   }
 
@@ -27,7 +36,7 @@
     border: 1px solid $hotpink;
     color: $hotpink;
 
-    width: 450px;
+
     background-color: transparent;
 
     &:hover{
@@ -38,6 +47,7 @@
 
   .input-focused{
     background-color: white;
+    color: black;
   }
 
   a{

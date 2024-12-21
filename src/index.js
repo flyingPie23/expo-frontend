@@ -4,6 +4,7 @@ import './assests/application.scss';
 
 import App from './pages/App.tsx';
 import LoginPage from './pages/LoginPage.tsx';
+import SignupPage from './pages/SignupPage.tsx';
 import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -14,6 +15,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignupPage />} />
     </Routes>
   </Router>
 );

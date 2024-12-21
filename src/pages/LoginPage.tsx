@@ -1,22 +1,20 @@
 import '../assests/application.scss';
 import React from 'react';
 
-import SignInForm from '../components/SignInForm.tsx';
+import {SignInForm} from '../components/Forms.tsx';
 
 const inputform = {
-  signup: [
+  signin: [
     {lable: "email"},
     {lable: "password" }
   ]
-
-
 }
 class LoginPage extends React.Component {
   public render() {
-    const {signup} = inputform
+    const {signin} = inputform
     return (
-      <div id="login-page">
-        <SignInForm signup={signup} />
+      <div id="auth-page">
+        <SignInForm signin={signin} />
       </div>
     );
   }
