@@ -1,0 +1,51 @@
+@import "../config/index";
+
+#login-page{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 50px 450px;
+  padding: 30px;
+  border-radius: 25px;
+  border-bottom: 1px solid $hotpink;
+  border-right: 1px solid $hotpink;
+
+  color: white;
+
+  .form-input-field{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid $hotpink;
+
+    width: 450px;
+    background-color: transparent;
+  }
+
+  .form-control-btn{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid $hotpink;
+    color: $hotpink;
+
+    width: 450px;
+    background-color: transparent;
+
+    &:hover{
+      background-color: $hotpink;
+      color: white;
+    }
+  }
+
+  .input-focused{
+    background-color: white;
+  }
+
+  a{
+    color: $hotpink;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
