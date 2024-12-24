@@ -3,17 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './assests/application.scss';
 
 import App from './pages/App.tsx';
+import Feed from "./pages/Feed.tsx"
 import LoginPage from './pages/LoginPage.tsx';
 import SignupPage from './pages/SignupPage.tsx';
+import { axiosInstance, isSignedIn} from "./scripts/axiosConfig.tsx"
+
 import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <Router>
     <Routes>
-      <Route path="/" element={<App />} />
+      <Route path="/" element={isSignedIn(axiosInstance) ? <Feed/> : <App />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
     </Routes>

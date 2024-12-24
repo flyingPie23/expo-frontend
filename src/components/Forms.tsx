@@ -51,13 +51,13 @@ export const SignInForm = (props:{ signin:  Array<{ lable: string}>;}) => {
 
 }
 
-export const SignUpForm = (props:{ signup:  Array<{ lable: string}>;}) => {
+export const SignUpForm = (props:{ signup:  Array<{ lable: string, type: string}>;}) => {
   const {signup} = props
 
-  const InputFormField: any = () => signup.map((inputLable: {lable: string}) =>
+  const InputFormField: any = () => signup.map((inputLable: {lable: string, type: string}) =>
     <div className="form-control">
       <br />
-      <input  type="password" id={inputLable.lable} name={inputLable.lable} className="form-input-field" placeholder={inputLable.lable} onFocus={(e) => e.target.classList.add('input-focused')} onBlur={(e) => e.target.classList.remove('input-focused')} />
+      <input type={inputLable.type} id={inputLable.lable} name={inputLable.lable} className="form-input-field" placeholder={inputLable.lable} onFocus={(e) => e.target.classList.add('input-focused')} onBlur={(e) => e.target.classList.remove('input-focused')} />
     </div>
 
   )
@@ -72,7 +72,7 @@ export const SignUpForm = (props:{ signup:  Array<{ lable: string}>;}) => {
     };
     console.log(user);
 
-    await signUp(user.email as string, user.password as string)
+    await signUp(user.email as string, user.password as string, user.password_confirmation as string)
 
   }
 

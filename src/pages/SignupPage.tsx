@@ -5,9 +5,9 @@ import {SignUpForm} from '../components/Forms.tsx';
 
 const inputform = {
   signup:[
-    {lable: "email"},
-    {lable: "password" },
-    {lable: "password confirmation"},
+    {lable: "email", type: "email"},
+    {lable: "password", type: "password" },
+    {lable: "password confirmation", type: "password"},
   ]
 }
 
