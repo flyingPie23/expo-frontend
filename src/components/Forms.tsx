@@ -4,7 +4,7 @@ import React from "react";
 import { login, signUp } from "../scripts/authHandler.tsx"
 
 export const SignInForm = (props:{ signin:  Array<{ lable: string}>;}) => {
-  const {signin} = props
+  const {signin } = props
 
   const InputFormField: any = () => signin.map((inputLable: {lable: string}) =>
     <div className="form-control">

@@ -3,6 +3,10 @@ import React from "react";
 
 import { logout } from "../scripts/authHandler.tsx"
 
+
+
+
+
 const SideBar = (props: { brand: {name: string, to: string, class: string}; tabs:Array<{ name: string, to: string, class: string }>; logoff:{name: string, class: string} }) => {
   const {brand, tabs, logoff} = props
   const BrandLink: any = () => <a href={brand.to} className={brand.class}> {brand.name} </a>
