@@ -24,7 +24,7 @@ const SideBar = (props: { brand: {name: string, to: string, class: string}; tabs
           <TabLink />
         </ul>
 
-        <hr />
+
 
       </div>
 

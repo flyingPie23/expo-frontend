@@ -1,5 +1,5 @@
 import '../assests/application.scss';
-import React from 'react';
+import React, { Component } from 'react';
 import Sidebar from "../components/Sidebar.tsx"
 
 const navigation = {
@@ -14,12 +14,60 @@ const navigation = {
   logoff:{name: "logout", class:"logout-btn"}
 }
 
-class Feed extends React.Component {
+interface Feedtab {
+  discover: boolean,
+  following: boolean
+}
+
+
+
+class Feed extends Component<{}, Feedtab> {
+  state: Feedtab = {
+    discover: true,
+    following: false
+  }
+
+  active = (event) => {
+    console.log(event.currentTarget.textContent);
+
+    if (event.currentTarget.textContent === 'Discover') {
+      this.setState({ discover: true, following: false });
+
+    } else if (event.currentTarget.textContent === 'Following') {
+      this.setState({ discover: false, following: true });
+    }
+  }
+
   public render() {
-    const {brand, tabs, logoff} = navigation
+    const {brand, tabs, logoff} = navigation;
     return (
-      <div id="landing-page">
-        <Sidebar brand={brand} tabs={tabs} logoff={logoff}  />
+      <div id="feed-page">
+        <Sidebar brand={brand} tabs={tabs} logoff={logoff} />
+
+        <div className="feed-header">
+          <h1 onClick={this.active} className={`feed-tab ${this.state.discover ? 'active' : ''}`}>Discover</h1>
+          <h1 onClick={this.active} className={`feed-tab ${this.state.following ? 'active' : ''}`}>Following</h1>
+        </div>
+
+        <div className="feed-results">
+          <div className="feed-content">
+            {this.state.discover ? (
+              Array.from({ length: 100 }).map((_, index) => (
+              <div key={index}>
+                <h1>Discover</h1>
+                <p>feed time</p>
+              </div>
+              ))
+            ) : (
+              Array.from({ length: 100 }).map((_, index) => (
+              <div key={index}>
+                <h1>Following</h1>
+                <p>feed time</p>
+              </div>
+              ))
+            )}
+          </div>
+        </div>
       </div>
     );
   }
