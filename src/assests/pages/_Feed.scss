@@ -1,41 +1,48 @@
 @import "../config/index";
 
 #feed-page{
-  .feed-header{
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    height: 80px;
-    width: 45%;
+
+  .feed-scroll{
     margin-left: 550px;
-    padding: 25px;
-    border: 1px solid white;
 
-    background-color: $dark-gray;
 
-    .feed-tab{
-      font-size: 24px;
-      color: white;
+    .feed-header{
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+      height: 80px;
+      width: 800px;
+
+      padding: 25px;
+      border: 1px solid white;
+
+      background-color: $dark-gray;
+
+      .feed-tab{
+        font-size: 24px;
+        color: white;
+      }
+
+      .active {
+        text-decoration: underline;
+        text-underline-offset: 12px;
+        text-decoration-color: $hotpink;
+
+      }
+    }
+    .feed-results{
+      padding: 25px;
+      width: 800px;
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+
+      .feed-content{
+        margin-top: 150px;
+      }
+
     }
 
-    .active {
-      text-decoration: underline;
-      text-underline-offset: 12px;
-      text-decoration-color: $hotpink;
-
-    }
   }
-  .feed-results{
-    margin-left: 550px;
-    width: 45%;
-    padding: 25px;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
 
-    .feed-content{
-      margin-top: 150px;
-    }
-
-  }
 
 }
