@@ -1,4 +1,5 @@
 import '../assests/application.scss';
+import 'tailwindcss/tailwind.css';
 import React from 'react';
 
 import Navbar from '../components/Navbar.tsx';
